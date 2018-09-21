@@ -1,0 +1,25 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "CS 336 Lab 03 at Calvin College",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanKim04/cs336.git"
+  },
+  "keywords": [
+    "Lab03"
+  ],
+  "author": "Chan Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChanKim04/cs336/issues"
+  },
+  "homepage": "https://github.com/ChanKim04/cs336#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
