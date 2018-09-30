@@ -1,0 +1,65 @@
+/* Text styles
+font: (Bold, italic, and small-cap), size, line height, font typeface*/
+/* body {
+    font: 16px "Comic Sans MS", cursive;
+}
+strong { 
+    color: red;
+    font: 200% serif;; 
+}
+.carrot { 
+    color: orange; 
+}
+.spinach { 
+    color: green; 
+}
+#first { 
+    font-style: italic; 
+} */
+
+
+/* selector 
+Challenges 
+1. #second { color: blue; } 
+2. */ 
+/* p { 
+    color: blue; 
+} */
+
+/* 
+p {color: blue; }
+
+strong {color: red; text-decoration: underline;}
+*/ 
+/*some other color names: azure, brown, coral, darkblue, firebrick*/
+
+/*** CSS Tutorial: Color page ***/
+
+/* page font */
+body {
+    font: 16px "Comic Sans MS", cursive;
+    background: url("Blue-rule.png");
+  }
+  
+  /* paragraphs */
+  p {
+    color: #00f;
+  }
+  #first {
+    font-style: italic;
+  }
+  
+  /* initial letters */
+  strong {
+    background-color: #ddf; 
+    color: #f00;
+    font: 200% serif;
+  }
+  
+  .spinach {
+    color: #080;
+    background-color: #ddf;
+  }
+  p::before { 
+      content: url("Yellow-pin.png");
+  }
