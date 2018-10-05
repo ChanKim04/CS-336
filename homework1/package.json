@@ -1,0 +1,25 @@
+{
+  "name": "homework1",
+  "version": "1.0.0",
+  "description": "homework1 for CS 336 at Calvin College\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[CH\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[2~Homework01 \u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001btion: Homework01 for CS 336 at Calvin College",
+  "main": "homework01.js",
+  "scripts": {
+    "start": "node homework01.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/ChanKim04/cs336.git"
+  },
+  "keywords": [
+    "Homework01",
+    "CS",
+    "336",
+    "Calvin",
+    "College"
+  ],
+  "author": "Chan Kim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
