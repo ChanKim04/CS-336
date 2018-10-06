@@ -1,0 +1,80 @@
+/*  Lab05
+ *  
+ * created Fall 2018 (10/05) 
+ * @author: Chan Kim (ck45) for CS 336 at Calvin College  
+ */
+
+border = 1px solid black 
+padding = 15px 20px
+
+body 
+    font: 24px Helvetica 
+    background: #999999 
+
+#main 
+    min-height: 500px 
+
+    margin: 0px 
+    padding: 0px 
+    display: flex 
+    flex-flow: row 
+
+#main > article 
+    padding: padding 
+    border: border 
+    background: #dddd88 
+    flex: 3 1 60% 
+    order: 2 
+
+
+#main > nav 
+    flex-direction: column 
+    padding: padding 
+    border: border 
+    background: #ccccff 
+    flex: 1 6 20% 
+    order: 1 
+    text-align: right 
+    flex-direction: column 
+
+#main > aside 
+    font-style: italic 
+    padding: padding  
+    border: border 
+    background: #ccccff 
+    flex: 1 6 20% 
+    order: 3 
+
+header, footer 
+    display: block 
+    padding: padding 
+    min-height: 50px 
+    border: border 
+    background: #ffeebb 
+
+header 
+    font-size: 120% 
+    font-weight: bolder 
+
+footer 
+    font-size: 50% 
+    flex-direction: column 
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) 
+    #main, #page 
+        flex-direction: column 
+    
+    #main 
+        min-height: auto 
+    
+    #main > nav 
+        text-align: left 
+    
+    #main > article, #main > nav, #main > aside 
+    /* Return them to document order */
+        order: 0 
+    
+    #main > nav, #main > aside, header, footer 
+        min-height: 50px 
+        max-height: auto 
