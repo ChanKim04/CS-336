@@ -1,0 +1,58 @@
+Exercise 6.1
+a. Identify the request methods that you can and can’t test using the two tools listed above. 
+    If a method cannot be testing using a particular tool, 
+    explain why this is the case. List the Curl commands you used successfully.
+    - curl
+        $ curl localhost:3000/request                                                     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                        Dload  Upload   Total   Spent    Left  Speed
+        100    18  100    18    0     0     82      0 --:--:-- --:--:-- --:--:--    82
+        Got a GET request
+
+        $ curl --head localhost:3000/request                                              % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                        Dload  Upload   Total   Spent    Left  Speed
+        0    18    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0HTTP/1.1 200 OK
+        X-Powered-By: Express
+        Content-Type: text/html; charset=utf-8
+        Content-Length: 18
+        ETag: W/"12-cIF2lNgitduRmnO83GOx/x2Lw+U"
+        Date: Sat, 13 Oct 2018 02:07:34 GMT
+        Connection: keep-alive
+
+        $ curl -X PUT localhost:3000/request -d '{"key": "value"}' -H 'Content-Type: application/json'
+        % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                        Dload  Upload   Total   Spent    Left  Speed
+        100    39  100    23  100    16    105     73 --:--:-- --:--:-- --:--:--   178
+        Got a PUT requestvalue
+
+        $ curl -X POST localhost:3000/request -d '{"key": "value"}' -H 'Content-Type: application/json'
+        % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                        Dload  Upload   Total   Spent    Left  Speed
+        100    40  100    24  100    16    109     73 --:--:-- --:--:-- --:--:--   182
+        Got a POST requestvalue
+
+        $ curl -X DELETE localhost:3000/request -d '{"key": "value"}' -H 'Content-Type: application/json'
+        % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                        Dload  Upload   Total   Spent    Left  Speed
+        100    42  100    26  100    16    118     73 --:--:-- --:--:-- --:--:--   191
+        Got a DELETE requestvalue
+
+    - Browser
+    I was able to test GET and POST in the browser.
+    GET could be seen by simply receiving the data, 
+    and POST was able to test it by checking the user input data via "/ my-handling-form-page" since its method is post.
+
+b. What is the most appropriate HTTP response code for pages that aren’t defined by an Express route?
+    The 400 status codes are more appropriate than the 500 status codes. 
+    The reason is that 400s are errors by the web browser and 500s are errors by the web server. 
+    404 seems to be the most appropriate among the 400 codes.
+    Except for 404, 400 can be acceptable since it can be a bad request.
+
+Exercise 6.2
+a. What HTTP methods do forms support?
+    - GET and POST
+
+b. How is the form data being passed back to the server and what syntactic form does it take? Is the data modified in any way?
+    - The information of req.body is delivered to the server in json format. 
+        In this process, it seems that data modification does not occur.
+        The data is delivered in json format to the server via a GET request, 
+        and when the user clicks the button, the information entered through the POST request is delivered to my-handling-form-page.

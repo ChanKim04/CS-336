@@ -1,0 +1,29 @@
+{
+  "name": "lab06",
+  "version": "1.0.0",
+  "description": "lab06 for CS 336 at Calvin College",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "http-status-codes": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "kill $(pgrep node); node app.js &",
+    "stop": "kill $(pgrep node)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanKim04/cs336.git"
+  },
+  "keywords": [
+    "lab06"
+  ],
+  "author": "Chan Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChanKim04/cs336/issues"
+  },
+  "homepage": "https://github.com/ChanKim04/cs336#readme"
+}
