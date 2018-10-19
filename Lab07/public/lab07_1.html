@@ -1,0 +1,39 @@
+<!--  
+    Lab07
+
+    created Fall 2018 (10/17) 
+    @author: Chan Kim (ck45) for CS 336 at Calvin College  
+-->
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab07</title>
+        <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <style>
+            a.test {
+                font-weight: bold;
+            }
+        </style>
+
+    </head>
+    <body>
+        <script>
+    
+        // Your code goes here.
+        $( document ).ready(function() {
+            $( "a" ).click(function( event ) {
+                alert( "The link will no longer take you to jquery.com" );
+                event.preventDefault();
+                $( this ).hide( "slow" );
+            });
+        });
+
+        $( "a" ).addClass( "test" );
+
+        </script>
+        <a href="http://jquery.com/">jQuery</a>        
+    </body>
+</html>
