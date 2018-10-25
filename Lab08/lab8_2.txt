@@ -1,4 +1,4 @@
-// Lab08
+﻿// Lab08
 
 // created Fall 2018 (10/25) 
 // @author: Chan Kim (ck45) for CS 336 at Calvin College   
@@ -34,4 +34,5 @@ Consider the following, more detailed questions based on statements in the tutor
     When the component is created for the first time, the server receives the JSON from the GET method, and the latest data is reflected in the state. When there is a change in the data, it is automatically updated by the React, which is a benefit because only minor modifications are made to the real-time update.
 
 4. The app implements optimistic updates. Isn’t optimism here more like foolishness? What if the server rejects the new comment (for whatever reason)?
+    Optimistic updates only update when data is valid. It creates an ID for the new data before updating. However, if there is an error, output the state without updating the new data.	
     This is positive because it updates the parts through the state rather than updating the whole.
