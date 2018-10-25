@@ -1,0 +1,37 @@
+// Lab08
+
+// created Fall 2018 (10/25) 
+// @author: Chan Kim (ck45) for CS 336 at Calvin College   
+
+Explain:
+
+1. the component structure of the application. What makes the UI composable and why does this matter?
+    You can return a tree of components you created yourself or created by someone else. This makes the React composable, and this is the key tenet for the maintainable front-end.
+
+2. what JSX does.
+    JSX is a JavaScrip XML precompiler that translates syntax into simple JavaScript.
+
+3. why ReactJS is safe with respect to XSS.
+    React does not generate raw HTML strings. For example, <div> tags are not actual DOM nodes. Its role is similar to <div>, but it is just a React component. So React prevents XSS.
+
+4. how the data flows through the components. How are comments loaded? created? saved.
+    Child components use data from the parent component as properties. The properties are accessible via this.props.author and this.props.children.
+    Saving a new comment is possible when the child component passes data to the parent component. This can be implemented by passing a new callback to the child in the parent's render method and binding it to the child's onCommentSubmit event.
+
+5. the nature and purpose of props and state. Which is immutable and which is mutable and why does this distinction matter?
+    props is immutable and is passed on to parents and are owned by their parents. state is mutable and when the state is updated, the component re-creates itself.
+    The render() method is written declaratively as a function for this.props and this.state, which ensures that the UI will always be consistent with the input values in the framework.
+
+Consider the following, more detailed questions based on statements in the tutorial.
+
+1. Try editing the comments.json file (to add or remove a legal comment). What happens and why?
+    When I consider the existing rules and add or remove them, it is immediately updated without any problems. However, When I add or remove the legal comments by ignoring the rule, nothing is displayed on the screen.
+
+2. When the CommentBox has loaded comments from the server (in loadCommentsFromServer()), why doesn’t it call render() to make them visible?
+    It is dynamically updated via a call to this.setState (). When updated, the UI is updated automatically, replacing the old annotation array with a new array on the server. The caller for these updates is called every 2 seconds via pollInterval = {2000}, at which time it runs the comments.json file and changes the files in the same directory as the server.
+
+3. Of what advantage, if any, is it to require that components always represent the current state of the view?
+    When the component is created for the first time, the server receives the JSON from the GET method, and the latest data is reflected in the state. When there is a change in the data, it is automatically updated by the React, which is a benefit because only minor modifications are made to the real-time update.
+
+4. The app implements optimistic updates. Isn’t optimism here more like foolishness? What if the server rejects the new comment (for whatever reason)?
+    This is positive because it updates the parts through the state rather than updating the whole.
