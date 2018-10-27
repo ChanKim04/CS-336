@@ -1,0 +1,26 @@
+{
+  "name": "homework2",
+  "version": "1.0.0",
+  "description": "homework2 for CS 336 at Calvin College",
+  "main": "server.js",
+  "scripts": {
+    "start": "kill $(pgrep node); node server.js &",
+    "stop": "kill $(pgrep node)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/ChanKim04/cs336.git"
+  },
+  "keywords": [
+    "Homework02",
+    "CS",
+    "336",
+    "Calvin",
+    "College"
+  ],
+  "author": "Chan Kim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

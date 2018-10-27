@@ -1,0 +1,26 @@
+[
+    {
+        "firstName": "Chan",
+        "lastName": "Kim",
+        "loginID": "ck45",
+        "startDate": "12/13/1990"
+    },
+    {
+        "firstName": "Mark",
+        "lastName": "Hofman",
+        "loginID": "mk34",
+        "startDate": "01/01/1982"
+    },
+    {
+        "firstName": "Matthew",
+        "lastName": "Jones",
+        "loginID": "mj67",
+        "startDate": "11/04/1986"
+    },
+    {
+        "firstName": "Brown",
+        "lastName": "Thom",
+        "loginID": "bt11",
+        "startDate": "10/10/2010"
+    }
+]
