@@ -24,12 +24,12 @@
             var dt = new Date();
             document.getElementById("today").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (("0"+dt.getDate()).slice(-2)) +"/"+ (dt.getFullYear());
         </script>
-        <form action="/save" method="post">
+        <form class="ui-widget" action="/save" method="post">
             <input type="text" id="firstName" name="first_name" placeholder="Last name">
             <input type="text" id="lastName" name="last_name" placeholder="First name">
             <input type="text" id="loginId" name="login_id" placeholder="Login ID">
             <input type="text" id="startDate" name="start_date" placeholder="Start date">
-            <input id="post" type="submit" value="Post">
+            <input class="ui-button ui-widget ui-corner-all" id="post" type="submit" value="Post">
         </form>
         <div>
             <div id="info"></div>
