@@ -1,0 +1,17 @@
+// Lab09
+
+// created Fall 2018 (11/02) 
+// @author: Chan Kim (ck45) for CS 336 at Calvin College 
+
+Exercise 9.1
+
+The server and application should now run as they did before. When you’ve confirmed that they do, consider the following:
+
+1. What good has this bundling done? How big is the new bundle file? Check the Chrome DevTools network log to see what files are being loaded.
+    When the web is initially loaded, it can be loaded into a single bundle file without having to load multiple resources, which can reduce loading time. The Bundle.js file is 5.9KiB and the index.js file is 3.6KiB. Thus, the size of the bundle file is larger than before bundling.
+2. What role did Babel play in the bundling?
+    Babel compiles JavaScript to run even in browsers that do not support the latest JavaScript.
+3. Can you just load file:///path…/index.html using the browser? Why or why not?
+    It can render commentList or commentForm because bundle.js file is in dist / directory with Index.html. However, the data in the JSON file cannot be loaded.
+4. In webpack.config.js, what does the loader test entry test: /\.jsx?$/ do?
+    It loads JSX and converts it to run as a loader. The following code shows that the babel-loader is a loader and JSX converts it to a babel-loader.
