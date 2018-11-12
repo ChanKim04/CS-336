@@ -1,0 +1,29 @@
+// Lab10
+
+// created Fall 2018 (11/09) 
+// @author: Chan Kim (ck45) for CS 336 at Calvin College 
+
+Exercise 10.1
+You’ll integrate this database into a RESTful API below. Take time now to consider the following questions.
+
+a. Compare and contrast MongoDB and the SQL databases you’ve used before. Are there things that one can do that the other can’t?
+Schema-based SQL ensures structure safety but is not flexible. However, MongoDB, which is not a schema base, has a flexible structure. MongoDB can find data by key value, but SQL does not.
+
+b. You could run MongoDB locally. What advantages and/or disadvantages would that bring with respect to the cloud database you have now?
+I think that the cloud database and the local database have different characteristics. Cloud databases have advantages in terms of accessibility. This allows users to access and modify data in the cloud from anywhere while online. On the contrary, local databases do not provide as convenient access as the cloud database. However, it has the advantage of being able to access and manage data locally with specific people in a closed environment such as an intranet.
+
+c. You’ve built a “sandbox” database on mLab. Could you use this for a production database? Why or why not?
+The sandbox does not contain real-time data because it does not immediately execute external data but tests it first in the protected area. Because of this characteristic, the sandbox cannot be used automatically in the production database and can be reconfigured in the production database if there is no issue in the test area.
+
+Exercise 10.2
+When everything is running again, consider the following questions.
+
+a. For this integration of mLab into your application, was it better to run the modified server (npm start) or the full Webpack development environment (npm run dev)? Why?
+There seems to be no significant functional difference between the full Webpack development environment and the modified server. However, in terms of speed, the full webpack development environment showed a response rate slightly faster than the modified server by about one second.
+
+
+b. Explain what happens when you modify the database using mLab’s web interface rather than your application? Try adding/updating/deleting comment documents.
+When I changed the data in mLab, the changes were updated immediately after a few seconds. Perhaps this is because pollInterval is set to 2000, which seems to have been updated after that time. Therefore, considering the update speed, it seems to be a fast response.
+
+c. Is this comments application the sort of application that should use an SQL or a noSQL database? Explain your answer.
+The Comments application is simply composed of author and message, so the tables with the relationship do not need to be extended horizontally, and it does not seem to need much connection in relation. Furthermore, it seems that this application is better suited to a document based rather than table based. Therefore, it seems that noSQL, a non-relational database, is more suitable than a relational database.
