@@ -1,0 +1,2 @@
+# Personal timeBook application
+It is a simple personal time book that helps the user know how much time he spent during the day and where he spent his time. This application is not intended to track time, but rather to help you organize the time spent during the day and plan the next. The overall framework is similar to the team GG lifeManager in CS 262.
