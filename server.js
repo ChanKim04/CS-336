@@ -45,7 +45,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/api/comments', function(req, res) {
-    db.collection('lab10').find().toArray(function (err, result) {
+    db.collection('lab10').find({}).toArray(function (err, result) {
         if (err) {
             console.error(err);
             process.exit(1);
@@ -65,7 +65,7 @@ app.post('/api/comments', function(req, res) {
             console.error(err);
             process.exit(1);
         }
-        db.collection('lab10').find().toArray(function (err, result) {
+        db.collection('lab10').find({}).toArray(function (err, result) {
             if (err) {
                 console.error(err);
                 process.exit(1);
@@ -86,7 +86,7 @@ MongoClient.connect('mongodb://cs336:'+dbpassword+'@ds157843.mlab.com:57843/cs33
   db = client;
   
   
-  db.collection('lab10').find().toArray(function (err, result) {
+  db.collection('lab10').find({}).toArray(function (err, result) {
     if (err) throw err
 
     console.log(result)
