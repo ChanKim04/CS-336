@@ -55,6 +55,6 @@
   },
   "homepage": "https://github.com/reactjs/react-tutorial",
   "engines": {
-    "node": "9.6.1"
+    "node": "^4.x"
   }
 }
