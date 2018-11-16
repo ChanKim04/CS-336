@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "react-tutorial",
   "version": "0.0.0",
   "private": true,
@@ -54,6 +54,6 @@
   },
   "homepage": "https://github.com/reactjs/react-tutorial",
   "engines": {
-    "node": "0.12.x"
+    "node": "9.6.1"
   }
 }
