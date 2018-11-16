@@ -4,7 +4,8 @@
 // @author: Chan Kim (ck45) for CS 336 at Calvin College 
 
 import React from 'react';
-
+import $ from 'jquery';
+import Remarkable from 'remarkable';
 import Comment from './Comment';
 
 module.exports = React.createClass({
