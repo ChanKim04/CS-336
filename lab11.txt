@@ -1,0 +1,19 @@
+Exercise 11.1
+The server and application should run as they did before and the new install/start scripts should run a production version of the system. When you’ve confirmed that they do, consider the following:
+
+
+a. Compare and contrast your development and production deployments and explain how each is designed.
+HotModuleReplacementPlugin was primarily for debugging. However, production needs to be lightweight because it is primarily for practical use. The UglifyJsPlugin and OccurenceOrderPlugin allow the JavaScript code to be minified and be used to reduce the overall file size by predicting frequently used id.
+
+b. List the optimizations you’ve configured for this production version and, if possible, find evidence of then in the deployed application files.
+UglifyJsPlugin, OccurenceOrderPlugin, ExtractTextPlugin
+The most noticeable optimization is that the UglifyJsPlugin is minified to make the code lightweight. This can be seen by looking at how the bundle.js file differs from the previous one.
+
+Exercise 11.2
+Heroku should now see the new pushed code on GitHub and deploy it to your assigned Heroku URL. Verify that the new deployment works in the same way and uses the same database. Note that it can take several minutes to auto-deploy new changes to the production branch. When you’ve confirmed that it does, consider the following:
+
+a. What advantage is there is deploying an application to a PaaS tool like Heroku?
+It enables the development, execution and management of business applications without the need to build and maintain the infrastructure required for the software development process in the cloud. This saves time and money in building infrastructure.
+
+b. How does Heroku know how to install and run your application (after pulling it from the specified branch on GitHub)?
+One of the applications that Heroku supports is Node.js. Therefore, after pulling it from the specified branch on GitHub, Heroku builds the application automatically and distributes it to the connected domain.
