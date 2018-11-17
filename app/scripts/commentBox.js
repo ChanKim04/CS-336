@@ -6,8 +6,8 @@
 import React from 'react';
 import $ from 'jquery';
 
-import CommentList from './CommentList';
-import CommentForm from './CommentForm';
+import CommentList from './commentList';
+import CommentForm from './commentForm';
 
 module.exports = React.createClass({
     loadCommentsFromServer: function() {

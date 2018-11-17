@@ -15,11 +15,13 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var MongoClient = require('mongodb').MongoClient;
+
+var MongoClient = require('mongodb').MongoClient
 
 var dbpassword = process.env.MONGO_PASSWORD; //bjarne1
 
@@ -43,9 +45,12 @@ app.use(function(req, res, next) {
 });
 
 app.get('/api/comments', function(req, res) {
-    db.collection("lab10").find({}).toArray(function(err, docs) {
-        if (err) throw err;
-        res.json(docs);
+    db.collection('lab10').find({}).toArray(function (err, result) {
+        if (err) {
+            console.error(err);
+            process.exit(1);
+        }
+        res.json(result);
     });
 });
 
@@ -55,13 +60,20 @@ app.post('/api/comments', function(req, res) {
         author: req.body.author,
         text: req.body.text,
     };
-    db.collection("lab10").insertOne(newComment, function(err, result) {
-        if (err) throw err;
-        db.collection("lab10").find({}).toArray(function(err, docs) {
-            if (err) throw err;
-            res.json(docs);
+    db.collection('lab10').insertOne(newComment, function(err, result) {
+        if (err) {
+            console.error(err);
+            process.exit(1);
+        }
+        db.collection('lab10').find({}).toArray(function (err, result) {
+            if (err) {
+                console.error(err);
+                process.exit(1);
+            }
+            res.json(result);
         });
-    });
+        
+    })
 });
 
 app.listen(app.get('port'), function() {
