@@ -1,0 +1,29 @@
+// Lab13
+
+// created Fall 2018 (11/28) 
+// @author: Chan Kim (ck45) for CS 336 at Calvin College 
+
+Exercise 13.1
+The development and production servers should still operate as they did before. When you’ve confirmed this, consider the following.
+
+a. What benefit did using the React Router bring to the application?
+The React Router allows you to connect to multiple web pages by applying the changes to the Client Side without having to reconnect according to the URL change.
+
+b. Which is better, hash history or browser history?
+Hash history and browser history have the same roles but have different views. Hash history shows the entire URL, but Browser history does not display information in the URL.
+
+c. Why does the server (either Webpack Dev Server or the Express server) have to be modified to support the browser history? Compare this with the hash-based server demonstrated in class, which didn't require such modifications.
+The server should send out the application no matter what URL it is given. However, the hash-based server does not handle the URL if it refreshes and sends a "Cannot GET" message as shown in the class.
+However, browser history solves the problem by serving index.html when the front-end cannot find the requested file without going through JavaScript.
+
+Exercise 13.2
+The development version of the application should now support the edit/delete feature (nb. we’ll reconfigure the production deployment in the next exercise).
+
+a. What state does the new CommentEdit component maintain and how does that compare with the state maintained by the CommentBox component?
+CommentBox basically requests the comments list as a GET request and manages it by adding additional comments to the list as a POST request. CommentEdit, however, maintains the status of a particular comment in the comments list according to its ID. CommentEdit allows you to modify that particular comment through a PUT request, delete it with a DELETE request, update the change, and apply it to the CommentBox.
+
+b. What does the CommentEdit component do when the AJAX PUT or DELETE methods return successfully? How does this compare with what the “Cancel” button provided by the CommentEdit component does?
+When PUT and DELETE are completed successfully, it calls this.context.router.push ('/') to push and update the changes. However, the Cancel button moves to / directory without any additional action.
+
+c. How is the Link added in the last step different from a simple HTML hyperlink?
+The React Router's link looks similar to the HTML hyperlink <a>. The <a> tag changes the address value when the request is changed. When the tag is clicked, the screen needs to be updated again. However, the link can be applied directly through the router without changing the address value or updating the screen.
